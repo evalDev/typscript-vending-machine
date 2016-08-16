@@ -29,6 +29,7 @@ gulp.task('ts', function(){
     }))
     .pipe(sourcemaps.init())
     .pipe(typescript({
+        target: "ES5",
         sortOutput: true,
         noImplicitAny: true,
         out: 'main.js'
