@@ -70,7 +70,7 @@ gulp.task('concat-spec', function(){
 gulp.task('watch', function(){
   gulp.watch('src/js-typescript/*.ts', ['ts']);
   gulp.watch('src/specs-jasmine/*.ts', ['build-specs', 'concat-spec', 'jasmine']);
-  // gulp.watch('builds/development/specs/mainSpec.js', ['jasmine']);
+  gulp.watch('src/html-jade/*.pug', ['pug']);
 });
 
 gulp.task('default', ['watch'], function(){
