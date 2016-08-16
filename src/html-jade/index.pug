@@ -5,5 +5,12 @@ html
   body
     .container
       h1 Vending Machine Simulation
+      .col-md-8
+      .col-md-4
+        h4 Paid: £
+          span#total
+          br
+          br
+          button.btn.btn-primary(onclick="machine.acceptCoin(new TwentyPence())") Insert 20p
 
     script(src="js/main.js")
