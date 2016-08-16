@@ -1,0 +1,1 @@
+const machine = new VendingMachine();
