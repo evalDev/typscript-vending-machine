@@ -1,0 +1,22 @@
+{
+  "name": "frontend-ts",
+  "version": "1.0.0",
+  "description": "Typescript Dev Env",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@evalDev",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-tslint": "^6.0.2",
+    "gulp-typescript": "^2.13.6",
+    "tslint": "^3.14.0",
+    "typescript": "^1.8.10"
+  }
+}
