@@ -5,8 +5,17 @@ var gulp = require('gulp'),
     jasmine = require('gulp-jasmine'),
     tslint = require('gulp-tslint'),
     typescript = require('gulp-typescript'),
+    pug = require('gulp-pug'),
     concat = require('gulp-concat');
 
+gulp.task('pug', function(){
+  gulp.src('src/html-jade/*.pug')
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('builds/development/'))
+})
 gulp.task('ts', function(){
   gulp.src('src/js-typescript/*.ts')
     .pipe(plumber())
