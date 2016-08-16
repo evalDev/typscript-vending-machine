@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     jasmine = require('gulp-jasmine'),
     tslint = require('gulp-tslint'),
     typescript = require('gulp-typescript'),
+    sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug'),
     concat = require('gulp-concat');
 
@@ -26,10 +27,13 @@ gulp.task('ts', function(){
     .pipe(tslint.report({
         emitError: true
     }))
+    .pipe(sourcemaps.init())
     .pipe(typescript({
+        sortOutput: true,
         noImplicitAny: true,
         out: 'main.js'
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('builds/development/js'))
 });
 
