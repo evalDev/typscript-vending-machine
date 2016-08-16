@@ -7,3 +7,4 @@ class TwentyPence {
     return "img/twenty_pence.jpg";
   }
 }
+const coin = new TwentyPence();
